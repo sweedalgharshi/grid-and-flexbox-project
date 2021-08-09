@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: aliceblue;
+}
+
+.item-1 {
+  background: url("./big-image.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no repeat;
+}
+.item-2 {
+  background: red;
+}
+
+.item-3 {
+  background: saddlebrown;
+}
+.item-4 {
+  background: seagreen;
+}
+.item-5 {
+  background: orangered;
+}
+.item-6 {
+  background: tomato;
+}
+.item-7 {
+  background: yellow;
+}
+.item-8 {
+  background: crimson;
+}
+.item-9 {
+  background: darksalmon;
+}
+.item-10 {
+  background: darkgray;
+}
+
+@media screen and (min-width: 578px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "one one two three three"
+      "one one four five five"
+      "six seven seven five five"
+      "six eight nine nine ten";
+  }
+
+  .item-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("./big-image.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    grid-area: one;
+  }
+
+  .item-2 {
+    background: rosybrown;
+    grid-area: two;
+  }
+
+  .item-3 {
+    background: saddlebrown;
+    grid-area: three;
+  }
+
+  .item-4 {
+    background: seagreen;
+    grid-area: four;
+  }
+
+  .item-5 {
+    background: tomato;
+    grid-area: five;
+  }
+
+  .item-6 {
+    background: yellow;
+    grid-area: six;
+  }
+
+  .item-7 {
+    background: brown;
+    grid-area: seven;
+  }
+
+  .item-8 {
+    background: crimson;
+    grid-area: eight;
+  }
+
+  .item-9 {
+    background: darkgray;
+    grid-area: nine;
+  }
+
+  .item-10 {
+    background: darksalmon;
+    grid-area: ten;
+  }
+}
